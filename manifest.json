@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Google Analytics augmentation",
+  "description": "Google Analytics augmentation.",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "files/png/icon.png",
+    "default_popup": "default.html"
+  },
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; object-src 'self'",
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://privatbank.ua/*"
+      ],
+      "js": [
+        "google-tag-manager-injector.js",
+        "privat24-ua-tracking.js"
+      ],
+      "css": [
+      ]
+    },
+    {
+      "matches": [
+        "*://my.ukrsibbank.com/*"
+      ],
+      "js": [
+        "google-tag-manager-injector.js",
+        "my-ukrsibbank-com-tracking.js"
+      ],
+      "css": [
+      ]
+    }
+  ]
+}
