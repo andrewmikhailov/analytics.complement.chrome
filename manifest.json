@@ -20,8 +20,6 @@
       "js": [
         "google-tag-manager-injector.js",
         "privat24-ua-tracking.js"
-      ],
-      "css": [
       ]
     },
     {
@@ -31,8 +29,6 @@
       "js": [
         "google-tag-manager-injector.js",
         "my-ukrsibbank-com-tracking.js"
-      ],
-      "css": [
       ]
     }
   ]
